@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fabsito Digital — ideas para negocios</title>
+  <meta name="description" content="Ideas y prototipos digitales para ayudar a negocios de barrio a mostrar mejor sus productos y servicios.">
+  <meta name="theme-color" content="#f2f5ec">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fabsito Digital — ideas para negocios">
+  <meta property="og:description" content="Prototipos de menús QR, catálogos y piezas visuales para comercios.">
+  <meta name="twitter:card" content="summary">
+  <style>
+    :root{--ink:#18322b;--muted:#60746c;--green:#225c49;--lime:#c8ee79;--paper:#f2f5ec;--white:#fff;--line:#dce5d8;--coral:#e67e5b}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit}
+    .wrap{width:min(1080px,calc(100% - 36px));margin:auto}
+    header{padding:22px 0}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .brand{font-weight:850;letter-spacing:-.04em;font-size:1.12rem;text-decoration:none}
+    .brand span{color:var(--green)}
+    .nav a:last-child{font-size:.9rem;font-weight:700;text-decoration:none;border-bottom:1px solid var(--green);padding-bottom:3px}
+    .hero{padding:70px 0 56px;display:grid;grid-template-columns:1.13fr .87fr;gap:45px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e4eddb;color:var(--green);font-size:.78rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;border-radius:99px;padding:8px 12px}
+    .dot{width:8px;height:8px;border-radius:50%;background:#80ae50}
+    h1{font-size:clamp(2.8rem,7vw,5.7rem);line-height:.99;letter-spacing:-.075em;margin:20px 0 18px;max-width:720px}
+    h1 em{font-style:normal;color:var(--green)}
+    .lead{font-size:1.12rem;color:var(--muted);max-width:590px;margin:0}
+    .buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .button{display:inline-block;text-decoration:none;border-radius:12px;padding:12px 18px;font-weight:800}
+    .button.primary{background:var(--green);color:white}
+    .button.secondary{border:1px solid #b9c9bb;background:transparent}
+    .visual{background:var(--green);border-radius:28px;padding:25px;color:white;min-height:300px;position:relative;overflow:hidden;box-shadow:0 20px 45px #18322b20}
+    .visual:after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:var(--lime);right:-82px;top:-80px;opacity:.95}
+    .screen{position:relative;z-index:1;background:#fff;color:var(--ink);border-radius:17px;padding:18px;width:85%;margin:24px auto 0;transform:rotate(-3deg);box-shadow:0 12px 30px #0c201829}
+    .screen-top{display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:.83rem;margin-bottom:14px}
+    .screen-tag{background:#edf4e5;color:var(--green);padding:5px 8px;border-radius:8px;font-size:.68rem}
+    .product{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:1px solid #e7ece4;font-size:.83rem}
+    .product strong{color:var(--green)}
+    .section{padding:62px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}
+    h2{font-size:clamp(1.8rem,4vw,2.65rem);line-height:1.05;letter-spacing:-.055em;margin:0}
+    .section-head p{max-width:370px;color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .card{border:1px solid var(--line);background:var(--white);border-radius:19px;padding:20px;min-height:220px;display:flex;flex-direction:column}
+    .icon{width:42px;height:42px;border-radius:13px;background:#e8f0dd;display:grid;place-items:center;font-size:1.25rem;margin-bottom:20px}
+    .card h3{font-size:1.06rem;margin:0 0 7px;letter-spacing:-.025em}
+    .card p{font-size:.91rem;color:var(--muted);margin:0 0 14px}
+    .label{margin-top:auto;align-self:flex-start;background:#f1f3ed;color:#52665d;border-radius:99px;padding:5px 9px;font-size:.72rem;font-weight:800}
+    .process{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+    .step{background:#e7eee1;border-radius:17px;padding:22px}
+    .step-num{color:var(--green);font-size:.8rem;font-weight:900;letter-spacing:.1em}
+    .step h3{margin:8px 0 6px;font-size:1.04rem}
+    .step p{margin:0;color:var(--muted);font-size:.9rem}
+    .note{background:#fff5e8;border:1px solid #f1ddc5;border-radius:19px;padding:23px 25px;display:grid;grid-template-columns:auto 1fr;gap:15px;align-items:start}
+    .note-icon{font-size:1.5rem}
+    .note h2{font-size:1.25rem;letter-spacing:-.03em;margin:0 0 7px}
+    .note p{color:#5d554b;font-size:.9rem;margin:0 0 9px}
+    .note a{font-weight:750;color:#6c4726}
+    .cta{background:var(--green);color:white;border-radius:26px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .cta h2{max-width:530px}
+    .cta p{color:#d5e4da;max-width:560px;margin:10px 0 0}
+    .cta .button{background:var(--lime);color:var(--ink);white-space:nowrap}
+    footer{padding:25px 0 34px;color:var(--muted);font-size:.82rem;display:flex;justify-content:space-between;gap:15px}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:26px;padding-top:48px}.visual{min-height:270px}.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.wrap{width:min(100% - 26px,1080px)}.nav a:last-child{font-size:.82rem}.hero{padding:36px 0 38px}.visual{padding:17px;min-height:255px}.screen{width:95%;margin-top:23px}.section{padding:43px 0}.section-head{display:block}.section-head p{margin-top:10px}.grid,.process{grid-template-columns:1fr}.card{min-height:190px}.note{padding:19px;grid-template-columns:1fr;gap:6px}.cta{display:block;padding:25px}.cta .button{margin-top:19px}footer{display:block}footer span{display:block;margin-top:5px}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">Fabsito <span>Digital</span></a>
+      <a href="#ideas">Ver ideas para negocios ↓</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero wrap" id="inicio">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Ideas digitales de barrio</span>
+        <h1>Un negocio también puede <em>brillar online.</em></h1>
+        <p class="lead">Diseño prototipos sencillos para que comercios y emprendimientos muestren mejor lo que hacen: menús, catálogos, promos y más.</p>
+        <div class="buttons"><a class="button primary" href="#ideas">Explorar ideas</a><a class="button secondary" href="#como">Cómo lo pienso</a></div>
+      </div>
+      <div class="visual" aria-label="Vista de ejemplo de un menú digital">
+        <div class="screen">
+          <div class="screen-top"><span>La Esquina · menú demo</span><span class="screen-tag">DEMO</span></div>
+          <div class="product"><span>🥐 Medialuna</span><strong>$ —</strong></div>
+          <div class="product"><span>☕ Café con leche</span><strong>$ —</strong></div>
+          <div class="product"><span>🥪 Sándwich veggie</span><strong>$ —</strong></div>
+        </div>
+      </div>
+    </section>
+    <section class="section wrap" id="ideas">
+      <div class="section-head"><h2>Ideas que puedo<br>prototipar</h2><p>Son ejemplos para mostrar creatividad y practicar. Cada negocio es distinto: primero escucho qué necesita.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon">▦</div><h3>Menú con QR</h3><p>Una página clara con productos, categorías y precios fáciles de actualizar.</p><span class="label">Muestra / demo</span></article>
+        <article class="card"><div class="icon">✳</div><h3>Catálogo digital</h3><p>Fotos, descripciones y datos importantes para que la gente encuentre lo que busca.</p><span class="label">Muestra / demo</span></article>
+        <article class="card"><div class="icon">▧</div><h3>Flyer de promoción</h3><p>Una pieza visual simple para anunciar novedades, horarios o una promo.</p><span class="label">Muestra / demo</span></article>
+        <article class="card"><div class="icon">☷</div><h3>Lista de productos</h3><p>Una forma ordenada de presentar artículos, servicios o preguntas frecuentes.</p><span class="label">Muestra / demo</span></article>
+      </div>
+    </section>
+    <section class="section wrap" id="como">
+      <div class="section-head"><h2>Simple, claro<br>y con buena onda.</h2><p>La idea es resolver algo chiquito y útil, sin complicarle la vida a nadie.</p></div>
+      <div class="process">
+        <article class="step"><span class="step-num">PASO 01</span><h3>Entender</h3><p>¿Qué quiere mostrar el negocio? ¿Qué información le preguntan siempre?</p></article>
+        <article class="step"><span class="step-num">PASO 02</span><h3>Probar una idea</h3><p>Armar un ejemplo y pedir opinión antes de pensar en una versión final.</p></article>
+        <article class="step"><span class="step-num">PASO 03</span><h3>Revisar juntos</h3><p>Comprobar que todo esté bien y que una persona adulta acompañe cualquier paso real.</p></article>
+      </div>
+    </section>
+    <section class="section wrap" aria-labelledby="seguridad">
+      <div class="note">
+        <div class="note-icon" aria-hidden="true">⚠️</div>
+        <div><h2 id="seguridad">Antes de aceptar un trabajo o cobrar</h2>
+          <p>En Argentina, la Ley 26.390 establece una prohibición general de trabajo para menores de 16 años, incluso remunerado o no. La norma contempla una excepción limitada para empresas familiares, con condiciones y autorización laboral. Antes de ofrecer servicios, aceptar encargos o cobrar, hablalo con tu madre, padre o tutor y consulten la autoridad laboral de su jurisdicción. Esta página es un portfolio de práctica, no una oferta de contratación.</p>
+          <p><a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/140000-144999/141792/norma.htm" target="_blank" rel="noopener noreferrer">Leer la Ley 26.390 en InfoLEG ↗</a></p>
+          <p>No publiques tu teléfono, dirección, escuela ni horarios; no te reúnas con personas desconocidas y no compartas datos ni arregles pagos sin una persona adulta de confianza.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section wrap">
+      <div class="cta"><div><h2>¿Tenés una idea para un negocio?</h2><p>Primero conversala con una persona adulta de confianza. Este portfolio muestra ideas de práctica, no toma pedidos ni comparte datos personales.</p></div><a class="button" href="#seguridad">Ver nota de seguridad</a></div>
+    </section>
+  </main>
+  <footer class="wrap"><strong>Fabsito Digital</strong><span>Ideas y prototipos · Hecho con curiosidad y cuidado.</span></footer>
+</body>
+</html>
